@@ -1,0 +1,16 @@
+#contain{
+     
+    align-content: center;
+    margin: 70px 0px;  
+}
+#contain div div{
+
+ max-height: 700px;
+ 
+}
+
+#contain div p{
+
+    max-height: 300px;
+  
+}
