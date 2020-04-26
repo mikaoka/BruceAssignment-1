@@ -16,7 +16,7 @@ $mysqli = new mysqli($host, $username, $user_pass, $database) or die(mysqli_erro
 if(isset($_POST['pg']))
 {
 
-//Get information when using post function
+//Get information when using post function and store into these variables
 $pg = $_POST['pg'];
 
 $h1 = $_POST['h1'];
@@ -58,7 +58,7 @@ else
 }
 
 
-
 }
 ?>
+
 
