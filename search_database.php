@@ -56,8 +56,8 @@ $result = $mysqli->query($sql);
 
 ?>
 
-
 <div id="contain">
+<a href="add_data.php" type="button" class="btn btn-primary">Return to form</a>
 <h1>sources from our database</h1>
 
 <div id="accordion"> 
@@ -87,6 +87,6 @@ if ($result->num_rows > 0) {
 </div>
 </div>
 
-
+<a href="add_data.php" type="button" class="btn btn-primary">Return to form</a>
  
 </body>
