@@ -30,6 +30,7 @@
   } );
   </script>
 <link href="style.css" rel="stylesheet" type="text/css">
+<title>database</title>
 </head>
 
 
@@ -52,22 +53,16 @@
     $result = $mysqli->query("SELECT * FROM pages") or die($connection->error()); 
     foreach($result as $page): ?>
 
-     <a href="index.php?page=<?php echo $page['pg']; ?>"; class="btn btn-primary"><?php echo $page['pg']; ?></a>
+     <a href="index.php?page=<?php echo $page['pg'];?>"; class="btn btn-primary"><?php echo $page['pg']; ?></a>
 
     <?php endforeach; ?>
-
-
-
-
-
-
 
     </ul>
     
     </div>
-    </div>
+</div>
 
-    <?php
+<?php
 //checks if any of the pages are selected
 if(isset($_GET['page']))
 {
@@ -75,7 +70,6 @@ if(isset($_GET['page']))
  $keywordfromindex = $_GET["page"];
 
  //search the database for the keyword and displays all that data
-
  //created a variable that collects data from selected table in the database
  $sql = "SELECT pg, h1, h2, h3, p1, p2 ,p3, img1, img2, img3 FROM pages WHERE pg LIKE '%". $keywordfromindex  . "%'";
  $result = $mysqli->query($sql);
@@ -88,7 +82,7 @@ if(isset($_GET['page']))
 
 <!-- displays all the data from that page and displays it within an accordion -->
 <div id="accordion"> 
-<?php
+<?php 
 if ($result->num_rows > 0)
  {
     
@@ -115,3 +109,4 @@ if ($result->num_rows > 0)
 </div>
 
 </body>
+
